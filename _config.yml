@@ -1,11 +1,11 @@
 # Site settings
 author: Nabil Hayet
-title: 
+title: Why I decided to become a web developper 
 header-img: img/home-bg.png
 email: nabil.bracu@gmail.com
 copyright_name: Nabil Hayet
 description: > # this means to ignore newlines until "baseurl:"
-  
+  New Start
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  nabilhayet
