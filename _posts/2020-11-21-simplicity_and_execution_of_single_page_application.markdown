@@ -41,4 +41,5 @@ When something goes wrong in a fetch() request, JavaScript will look down the ch
   }); ```
 	
 	```Promise ->```
+	
 Whenever we make any kind of request to the backend, we get a promise back. At that stage, the promise is in a pending state. If the promise is resolved then() callback function is executed and we get a response back. Otherwise, the promise is rejected and program of execution goes to the catch block to display the error by skipping  those lines inside then function. If everything works fine, we get the result as a json object and render it on the DOM. 
