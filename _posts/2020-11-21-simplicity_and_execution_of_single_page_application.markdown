@@ -30,7 +30,7 @@ After the fetch request, servers will send a [Response]. To access the informati
 
 ```.then(function(object) { 
           console.log(object);
-      }) 
+      }) ```
 			
 ``` Reject as catch() ->```
 When something goes wrong in a fetch() request, JavaScript will look down the chain of .then() calls for a catch. When something goes wrong in a fetch(), the next catch() is called so that error work can be performed. If we forgot to add the HTTP verb to our POST request, and the fetch() defaults to GET. By including a catch() statement, JavaScript doesn't fail silently. 
