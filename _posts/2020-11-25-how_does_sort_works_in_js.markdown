@@ -10,7 +10,7 @@ In a js application we might be in a situation where we need to sort out somethi
 
 ```Fetch everything from backend and add sort button ->``` When we make a request to the backend to fetch something we use fetch. Inside the fetch call, we provide the basic url + the route. So, if we want to fetch all the animals from the backend, the fetch will be ```fetch('http://localhost:3000/animals')```. 
 
-```document.getElementById("animals").addEventListener('click', fetchAllAnimal)
+``` document.getElementById("animals").addEventListener('click', fetchAllAnimal)
 function fetchAllAnimal(){
  fetch(BASE_URLS + '/animals')
     .then(response => response.json())
@@ -18,7 +18,7 @@ function fetchAllAnimal(){
 		     animals.forEach(ani => { 
             const an =  new An(ani)
             main_animal.querySelector("ul").innerHTML += an.renderAnimalName()
-         })```
+         }) ```
 				 
 We have fetched all the animals from the backend and created an instance of the animal class for each animal. We have stored all the inastances of animal class inside a static array called collection. 
 
@@ -53,7 +53,7 @@ We have fetched all the animals from the backend and created an instance of the 
 
 ```Sort Function Comapre ->``` The sort function two items as an argument and sorts it based on the given condition. If we want to sort the animals by name the scenario look like 
 
-```function compare(a,b){
+``` function compare(a,b){
     const nameA = a.name.toUpperCase();
     const nameB = b.name.toUpperCase();
     let comparison = 0;
@@ -63,7 +63,7 @@ We have fetched all the animals from the backend and created an instance of the 
          comparison = -1;
         }
   return comparison *;
-  }``` 
+  } ```
 
 If we want to sort the elements by desc order, we have to multiply comparison with -1in return statement. After sorting, the function returns its result to the static array. Finally, We render the sorted items on the DOM.
 		
