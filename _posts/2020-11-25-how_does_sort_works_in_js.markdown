@@ -54,15 +54,25 @@ We have fetched all the animals from the backend and created an instance of the 
 ```Sort Function Comapre ->``` The sort function two items as an argument and sorts it based on the given condition. If we want to sort the animals by name the scenario look like 
 
 ``` function compare(a,b){
+
     const nameA = a.name.toUpperCase();
+		
     const nameB = b.name.toUpperCase();
+		
     let comparison = 0;
+		
        if (nameA > nameB) {
+			 
           comparison = 1;
+					
        } else if (nameA < nameB) {
+			 
          comparison = -1;
+				 
         }
-  return comparison *;
+				
+  return comparison;
+	
   } ```
 
 If we want to sort the elements by desc order, we have to multiply comparison with -1in return statement. After sorting, the function returns its result to the static array. Finally, We render the sorted items on the DOM.
