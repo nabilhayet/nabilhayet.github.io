@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "How does sort works in JS"
-date:       2020-11-26 01:17:23 +0000
+date:       2020-11-25 20:17:24 -0500
 permalink:  how_does_sort_works_in_js
 ---
 
