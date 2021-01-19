@@ -13,11 +13,14 @@ While working on this lab, a lot of concepts amazed me. The first thing that i w
 ``` http://localhost:3000/bookings?utf8=%E2%9C%93&user=1&date=&commit=Filter``` 
 
 That's the opposite of REST. That makes the user stressed. That URL tells us nothing, really, about the resources we're accessing. What we'd love to end up with here is something like /users/1/bookings for all of an userr's bookings and /users/1/bookings/5 to see an individual booking by that user.
+
 ```resources :users, only: [:show] do 
         resources :bookings, only: [:index, :show, :new, :create, :update, :edit, :destroy]
     end```
 		
 Over here, user is the parent resource and booking is the child one. The way its writeen defines that booking routes are nested under user for only show action. If we want to see other actions as non nested, we have to define them separately after the end block. It also allows the user to keep track of both the parent and child object at the same time in the controller. 
+
+
 ``` def new 
             if is_logged_in?
               @user = current_user 
@@ -27,8 +30,8 @@ Over here, user is the parent resource and booking is the child one. The way its
           end 
        end``` 
 		
-We are getting the current user from the helper method. Then we are making a connection between a user and a booking. The new form of making a new reservation for a user keeps track of both of the objects.
-```<%= form_for [@user, @booking] do |f| %>
+We are getting the current user from the helper method. Then we are making a connection between a user and a booking. The new form of making a new reservation for a user keeps track of both of the objects.        
+ ```<%= form_for [@user, @booking] do |f| %>
        <%= f.hidden_field :user_id %>
                <label>Booking Date:</label>
                 <%= f.date_field :date %>
