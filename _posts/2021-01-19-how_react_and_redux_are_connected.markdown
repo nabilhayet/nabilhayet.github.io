@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "How React and Redux are Connected!"
-date:       2021-01-20 02:40:57 +0000
+date:       2021-01-19 21:40:57 -0500
 permalink:  how_react_and_redux_are_connected
 ---
 
