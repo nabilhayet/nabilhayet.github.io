@@ -34,43 +34,39 @@ Wouldn't it be great if we could change something in the parent component and th
 
 ```function createStore(reducer) {
   let state;
- 
-  function dispatch(action) {
+ function dispatch(action) {
     state = reducer(state, action);
     render();
-  }
- 
-  function getState() {
+  }```
+	
+ ```function getState() {
     return state;
-  };
- 
-  return {
+  };```
+	
+ ```return {
     dispatch,
     getState
   };
-};
- 
-function reducer(state = { count: 0 }, action) {
+};```
+
+```function reducer(state = { count: 0 }, action) {
   switch (action.type) {
     case 'INCREASE_COUNT':
       return { count: state.count + 1 };
- 
-    default:
+      default:
       return state;
   }
-}
- 
- 
-function render() {
+}```
+
+```function render() {
   let container = document.getElementById('container');
   container.textContent = store.getState().count;
-};
+};```
  
-let store = createStore(reducer)
+```let store = createStore(reducer)
 store.dispatch({ type: '@@INIT' });
 let button = document.getElementById('button');
- 
-button.addEventListener('click', () => {
+ button.addEventListener('click', () => {
   store.dispatch({ type: 'INCREASE_COUNT' });
 });``` 
 
@@ -84,9 +80,9 @@ Now, our main goal is to use global state for our first example.  Let's see how 
 
 ```const store = createStore(
   The Reducer Name,
-);
+);```
  
-ReactDOM.render(
+```ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
