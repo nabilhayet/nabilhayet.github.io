@@ -119,7 +119,7 @@ We can not access the dispatch function directly. So we have to define that func
     )
   }
 }```
-const mapDispatchToProps = dispatch => {
+```const mapDispatchToProps = dispatch => {
   return {
       addArticle: () => { dispatch(addArticle(article) }
     }
@@ -132,7 +132,7 @@ So inside BlogPost, instead of sending props to BlogContent, we are invoking the
 ```const addArticle = (article) => { 
       return { type: ADD_ARTICLE,
 			                article: article 
-			}```
+}```
 	
 The addArticle function returns an action. The action is an object. The object has two keys. One is type and another one is the variable that we sent from BlogPost. After getting back the action, the dispatch function inside the BlogPost class calls the reducer function. 
 	
